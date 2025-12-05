@@ -58,7 +58,6 @@
 
 // console.log(isNumEven(numbers));
 
- 
 // Завдання 5:
 // Знайдіть перше непарне число
 
@@ -142,108 +141,105 @@
 
 // console.log(sumNumbers(numbers));
 
-class Calculator {
-    constructor(initialValue = 0) {
-        this.value = initialValue;
-    }
-    number(num) {
-        this.value = num;
-        return this;
-    }
-    getResult() {
-        return this.value
-    }
-    add(num) {
-        this.value += num;
-        return this;
-    }
-    subtract(num) {
-        this.value -= num;
-        return this;
-    }
-    divide(num) {
-        if (num === 0) {
-    throw new Error("Cannot divide by zero!");
-  }
-  this.value /= num;
-  return this;
-    }
-    multiply(num) {
-        this.value *= num;
-        return this;
-    }
-}
+// class Calculator {
+//   constructor(initialValue = 0) {
+//     this.value = initialValue;
+//   }
+//   number(num) {
+//     this.value = num;
+//     return this;
+//   }
+//   getResult() {
+//     return this.value;
+//   }
+//   add(num) {
+//     this.value += num;
+//     return this;
+//   }
+//   subtract(num) {
+//     this.value -= num;
+//     return this;
+//   }
+//   divide(num) {
+//     if (num === 0) {
+//       throw new Error('Cannot divide by zero!');
+//     }
+//     this.value /= num;
+//     return this;
+//   }
+//   multiply(num) {
+//     this.value *= num;
+//     return this;
+//   }
+// }
 
-const calc = new Calculator();
+// const calc = new Calculator();
 
-const result = calc
-  .number(10)   // Встановлюємо початкове значення 10
-  .add(5)       // Додаємо 5 (10 + 5 = 15)
-  .subtract(3)  // Віднімаємо 3 (15 - 3 = 12)
-  .multiply(4)  // Множимо на 4 (12 * 4 = 48)
-  .divide(2)    // Ділимо на 2 (48 / 2 = 24)
-  .getResult(); // Отримуємо результат: 24
+// const result = calc
+//   .number(10) // Встановлюємо початкове значення 10
+//   .add(5) // Додаємо 5 (10 + 5 = 15)
+//   .subtract(3) // Віднімаємо 3 (15 - 3 = 12)
+//   .multiply(4) // Множимо на 4 (12 * 4 = 48)
+//   .divide(2) // Ділимо на 2 (48 / 2 = 24)
+//   .getResult(); // Отримуємо результат: 24
 
+// console.log(result); // 24
 
-  console.log(result); // 24
+// // Завдання 12:
+// // Напиши клас Client який створює об'єкт з властивостями login email.
+// // Оголоси приватні властивості #login #email, доступ до яких зроби
+// // через геттер та сеттер login email
 
-// Завдання 12:
- // Напиши клас Client який створює об'єкт з властивостями login email.
- // Оголоси приватні властивості #login #email, доступ до яких зроби 
- // через геттер та сеттер login email
- 
-class Client {
-    #login
-    #email
-    constructor(login, email) {
-        this.#email = email;
-        this.#login = login;
-    }
-    get email() {
-        return this.#email;
-    }
-    get login() {
-        return this.#login;
-    }
-    set email(newEmail) {
-        this.#email = newEmail;
-        
-    }
-    set login(newLogin) {
-        this.#login = newLogin;
-        
-    }
-}
- 
-class Person {
-    constructor(name, age, gender, email) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.email = email;
-    }
+// class Client {
+//   #login;
+//   #email;
+//   constructor(login, email) {
+//     this.#email = email;
+//     this.#login = login;
+//   }
+//   get email() {
+//     return this.#email;
+//   }
+//   get login() {
+//     return this.#login;
+//   }
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+//   set login(newLogin) {
+//     this.#login = newLogin;
+//   }
+// }
 
-    getDetails() {
-        return {
-            name: this.name,
-            age: this.age,
-            gender: this.gender,
-            email: this.email
-        }
-    }
-}
+// class Person {
+//   constructor(name, age, gender, email) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     this.email = email;
+//   }
 
+//   getDetails() {
+//     return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email,
+//     };
+//   }
+// }
 
-class Employee extends Person{
-    constructor(name, age, gender, email, salary, department) {
-        super(name, age, gender, email);
-        this.salary = salary;
-        this.department = department;
-  }
-    getEmployeeDetails() {
-    return {
-        salary: this.salary,
-        department: this.department
-    }
-    }
-}
+// class Employee extends Person {
+//   constructor(name, age, gender, email, salary, department) {
+//     super(name, age, gender, email);
+//     this.salary = salary;
+//     this.department = department;
+//   }
+//   getEmployee;
+//   etails() {
+//     return {
+//       salary: this.salary,
+//       department: this.department,
+//     };
+//   }
+// }
